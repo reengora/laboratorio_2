@@ -92,6 +92,8 @@ void pushCurrent(List * list, void * data) {
             Node* aux = list->current->next;
             aux->prev = nuevo;
             list->current->next = nuevo;
+            nuevo->prev = list->current;
+            nuevo->next = aux;
             return;
         }
         
