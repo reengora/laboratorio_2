@@ -66,3 +66,15 @@ Fri Mar 27 06:04:08 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 1571e45
+Fri Mar 27 06:05:28 PM UTC 2026: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:88:27: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   88 |             nuevo->prev = current;
+      |                           ^~~~~~~
+      |                           popCurrent
+list.c:88:27: note: each undeclared identifier is reported only once for each function it appears in
+f9ad3ee
