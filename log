@@ -19,3 +19,14 @@ list.c:83:22: error: expected ‘;’ before ‘list’
    84 |     list->Current->next = nuevo;
       |     ~~~~              
 7522b37
+Fri Mar 27 05:51:53 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:84:11: error: ‘List’ {aka ‘struct List’} has no member named ‘Current’; did you mean ‘current’?
+   84 |     list->Current->next = nuevo;
+      |           ^~~~~~~
+      |           current
+58100f9
