@@ -113,7 +113,7 @@ void pushBack(List * list, void * data) {
     list->head = nuevo;
     list->tail = nuevo;
     list->current = nuevo;
-    return
+    return;
     
     
 }
