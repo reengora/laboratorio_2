@@ -357,3 +357,14 @@ Sat Mar 28 10:53:33 PM UTC 2026:
  tests:  11|1
 total_score: 50/60
 79cecaa
+Sat Mar 28 10:57:43 PM UTC 2026: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:182:53: error: suggest parentheses around comparison in operand of ‘&’ [-Werror=parentheses]
+  182 |     if(list->current != NULL && list->current->next == NULL & list->current->prev != NULL){
+      |                                                     ^
+cc1: all warnings being treated as errors
+e6151ba
