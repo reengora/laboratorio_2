@@ -204,7 +204,7 @@ void * popCurrent(List * list) {
         list->head = sig;
         free(list->current);
         list->current = sig;
-        sig->prev = NULL
+        sig->prev = NULL;
         return dato;
     }
     return NULL;
