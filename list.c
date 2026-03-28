@@ -195,6 +195,13 @@ void * popCurrent(List * list) {
         return dato;
         
     }
+    if(list->current != NULL && list->current->prev == NULL && list->current->next != NULL){
+        void* dato = list->current->data;
+        Node* sig = list->current->next;
+        list->head = sig;
+        list->current = sig;
+        return dato;
+    }
     return NULL;
 }
 
