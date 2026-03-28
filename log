@@ -338,3 +338,16 @@ list.c:189:23: error: assignment to ‘Node *’ from incompatible pointer type 
   189 |         list->current = ant;
       |                       ^
 c629d88
+Sat Mar 28 10:52:22 PM UTC 2026: 
+ list.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popFront’:
+list.c:153:35: error: expected ‘;’ before ‘return’
+  153 |         list->current = list->head
+      |                                   ^
+      |                                   ;
+  154 |         return popCurrent(list);
+      |         ~~~~~~                     
+be73330
