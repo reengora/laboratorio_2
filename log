@@ -305,3 +305,36 @@ Sat Mar 28 09:20:31 PM UTC 2026:
  tests:  11|1
 total_score: 50/60
 e6b6acf
+Sat Mar 28 10:49:57 PM UTC 2026: 
+ list.c | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popFront’:
+list.c:153:35: error: expected ‘;’ before ‘return’
+  153 |         list->current = list->head
+      |                                   ^
+      |                                   ;
+  154 |         return popCurrent(list);
+      |         ~~~~~~                     
+list.c: In function ‘popCurrent’:
+list.c:179:9: error: implicit declaration of function ‘clear’ [-Wimplicit-function-declaration]
+  179 |         clear(list->current);
+      |         ^~~~~
+list.c:184:9: error: unknown type name ‘node’; did you mean ‘Node’?
+  184 |         node* ant = list->current->prev;
+      |         ^~~~
+      |         Node
+list.c:184:21: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+  184 |         node* ant = list->current->prev;
+      |                     ^~~~
+list.c:186:12: error: request for member ‘next’ in something not a structure or union
+  186 |         ant->next = NULL;
+      |            ^~
+list.c:187:13: error: assignment to ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+  187 |         ant = list->tail;
+      |             ^
+list.c:189:23: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  189 |         list->current = ant;
+      |                       ^
+c629d88
