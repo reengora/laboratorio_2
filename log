@@ -156,3 +156,42 @@ list.c:101:16: error: assignment to ‘Node *’ from incompatible pointer type 
   101 |     list->head = nuevo;
       |                ^
 da8a3d5
+Sat Mar 28 08:47:59 PM UTC 2026: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:38:20: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   38 |     List* lista = (list*)malloc(sizeof(list));
+      |                    ^~~~
+      |                    List
+list.c:38:20: note: each undeclared identifier is reported only once for each function it appears in
+list.c:38:25: error: expected expression before ‘)’ token
+   38 |     List* lista = (list*)malloc(sizeof(list));
+      |                         ^
+list.c: In function ‘pushFront’:
+list.c:93:5: error: unknown type name ‘node’; did you mean ‘Node’?
+   93 |     node* nuevo = createNode(data);
+      |     ^~~~
+      |     Node
+list.c:93:19: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+   93 |     node* nuevo = createNode(data);
+      |                   ^~~~~~~~~~
+list.c:96:29: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   96 |         list->current->prev = nuevo;
+      |                             ^
+list.c:97:14: error: request for member ‘next’ in something not a structure or union
+   97 |         nuevo->next = current;
+      |              ^~
+list.c:97:23: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   97 |         nuevo->next = current;
+      |                       ^~~~~~~
+      |                       popCurrent
+list.c:98:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   98 |         list->head = nuevo;
+      |                    ^
+list.c:101:16: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+  101 |     list->head = nuevo;
+      |                ^
+f15d217
