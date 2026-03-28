@@ -109,6 +109,11 @@ void pushBack(List * list, void * data) {
         pushCurrent(list,data);
         return;
     }
+    Node* nuevo = createNode(data);
+    list->head = nuevo;
+    list->tail = nuevo;
+    list->current = nuevo;
+    return
     
     
 }
