@@ -253,3 +253,14 @@ Sat Mar 28 08:53:00 PM UTC 2026:
  1 file changed, 1 deletion(-)
  tests:  0|0
 c3cb405
+Sat Mar 28 09:05:01 PM UTC 2026: 
+ list.c | 19 +++++++++++++------
+ 1 file changed, 13 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:108:25: error: ‘tail’ undeclared (first use in this function)
+  108 |         list->current = tail;
+      |                         ^~~~
+list.c:108:25: note: each undeclared identifier is reported only once for each function it appears in
+c835f60
