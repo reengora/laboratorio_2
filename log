@@ -380,3 +380,17 @@ Sat Mar 28 11:02:03 PM UTC 2026:
  tests:  11|1
 total_score: 50/60
 bb4800b
+Sat Mar 28 11:04:47 PM UTC 2026: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:208:9: error: expected ‘;’ before ‘return’
+  208 |         return dato;
+      |         ^~~~~~
+list.c:202:15: error: unused variable ‘dato’ [-Werror=unused-variable]
+  202 |         void* dato = list->current->data;
+      |               ^~~~
+cc1: all warnings being treated as errors
+9b0bec5

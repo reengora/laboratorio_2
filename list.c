@@ -176,6 +176,7 @@ void * popCurrent(List * list) {
         void* dato = list->current->data;
         ant->next = sig;
         sig->prev = ant;
+        free(list->current);
         list->current = sig;
         return dato;
     }
@@ -184,6 +185,7 @@ void * popCurrent(List * list) {
         void* dato = list->current->data;
         ant->next = NULL;
         list->tail = ant;
+        free(list->current);
         list->current = ant;
         return dato;
     }
@@ -191,6 +193,7 @@ void * popCurrent(List * list) {
         void* dato = list->current->data;
         list->tail = NULL;
         list->head = NULL;
+        free(list->current);
         list->current = NULL;
         return dato;
         
@@ -199,7 +202,9 @@ void * popCurrent(List * list) {
         void* dato = list->current->data;
         Node* sig = list->current->next;
         list->head = sig;
+        free(list->current);
         list->current = sig;
+        sig->prev = NULL
         return dato;
     }
     return NULL;
