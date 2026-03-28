@@ -99,6 +99,7 @@ void pushFront(List * list, void * data) {
         return;
     }
     list->head = nuevo;
+    list->tail = nuevo;
     return;
     
 }
