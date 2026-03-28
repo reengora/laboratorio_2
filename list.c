@@ -179,7 +179,7 @@ void * popCurrent(List * list) {
         list->current = sig;
         return dato;
     }
-    if(list->current != NULL && list->current->next == NULL & list->current->prev != NULL){
+    if(list->current != NULL && list->current->next == NULL && list->current->prev != NULL){
         Node* ant = list->current->prev;
         void* dato = list->current->data;
         ant->next = NULL;
