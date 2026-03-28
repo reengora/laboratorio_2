@@ -105,7 +105,7 @@ void pushFront(List * list, void * data) {
 
 void pushBack(List * list, void * data) {
     if(list->tail != NULL){
-        list->current = tail;
+        list->current = list->tail;
         pushCurrent(list,data);
         return;
     }
