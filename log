@@ -238,3 +238,8 @@ list.c:97:23: error: ‘current’ undeclared (first use in this function); did 
       |                       popCurrent
 list.c:97:23: note: each undeclared identifier is reported only once for each function it appears in
 7050d87
+Sat Mar 28 08:49:19 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+7c3cd7f
