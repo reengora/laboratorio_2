@@ -150,7 +150,7 @@ void pushCurrent(List * list, void * data) {
 
 void * popFront(List * list) {
     if(list->head != NULL){
-        list->current = list->head
+        list->current = list->head;
         return popCurrent(list);
     }
     return NULL;
