@@ -58,7 +58,7 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if(list->current->next != NULL){
+    if(list->current->next != NULL && list->current != NULL){
         list->current = list->current->next;
         return(list->current->data);
     }
@@ -79,7 +79,7 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    if(list->current->prev != NULL){
+    if(list->current->prev != NULL && list->current != NULL){
         list->current = list->current->prev;
         return(list->current->data);
     }
@@ -128,7 +128,6 @@ void pushCurrent(List * list, void * data) {
         list->current->next =nuevo;
         nuevo->prev = list->current;
         list->tail= nuevo;
-        list->head = nuevo;
         return;
     };
     if(list->current->next == NULL)
